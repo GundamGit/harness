@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-1.2.0-brightgreen.svg" alt="Version">
+  <img src="https://img.shields.io/badge/Version-1.2.1-brightgreen.svg" alt="Version">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License"></a>
   <img src="https://img.shields.io/badge/Claude_Code-Plugin-purple.svg" alt="Claude Code Plugin">
   <img src="https://img.shields.io/badge/Patterns-6_Architectures-orange.svg" alt="6 Architecture Patterns">
@@ -258,7 +258,7 @@ Harness는 Claude Code / 에이전트 프레임워크 생태계에서 혼자가 
 
 ## 요구사항
 
-- [에이전트 팀 기능 활성화](https://code.claude.com/docs/en/agent-teams): `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`
+- (선택, 에이전트 팀 모드를 쓸 때만) [에이전트 팀 기능 활성화](https://code.claude.com/docs/en/agent-teams): `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`. 꺼져 있으면 하네스가 그 사실을 알리고 서브 에이전트로 설계한다.
 
 ## FAQ
 
