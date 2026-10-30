@@ -2,7 +2,7 @@
 
 > **Status:** Active · **Owner:** revfactory · **Last updated:** 2026-04-18 · **SLA:** See [Monitoring Commitment](#monitoring-commitment)
 
-This document explains why `harness` requires `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`, the three plausible futures of that flag, and what this repository will do in each case — with time-boxed commitments so enterprise adopters can plan against it.
+This document explains why `harness`'s agent-team mode requires `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1` (single-agent and sub-agent modes do not), the three plausible futures of that flag, and what this repository will do in each case — with time-boxed commitments so enterprise adopters can plan against it.
 
 ---
 
@@ -25,7 +25,7 @@ All three flag-gated primitives require:
 export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
 ```
 
-Without this variable set in the shell that launches `claude`, harness's generated teams fall back to single-agent execution, which silently breaks the Pipeline / Fan-out-in / Supervisor / Hierarchical Delegation patterns.
+Without this variable set in the shell that launches `claude`, `TeamCreate` is unavailable. harness checks for it before choosing team mode; if it is missing, harness tells the user and designs the team with sub-agents instead.
 
 ### Anthropic references (required reading before filing issues)
 
